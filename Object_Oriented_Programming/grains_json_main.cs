@@ -9,22 +9,51 @@ namespace Object_Oriented_Programming
 {
     internal class grains_json_main
     {
-        grains_Inventory grains = new grains_Inventory();
-        List<grains_Inventory> grains_list = new List<grains_Inventory>();
-
         public void conversion(string jsonFilePath)
         {
+            Factory_Model factory = new Factory_Model();
+            List<grains_Inventory> Rice;
+            List<grains_Inventory> Pulses;
+            List<grains_Inventory> Wheat;
+
             using (StreamReader reader = new StreamReader(jsonFilePath))
             {
                 var json = reader.ReadToEnd();
-                var items = JsonConvert.DeserializeObject<List<grains_Inventory>>(json);
-                Console.WriteLine("Name        Price_per_Kg          Weight          Total_Price");
-                foreach(var x in items)
+                Factory_Model items = JsonConvert.DeserializeObject<Factory_Model>(json);
+                Rice = items.Rice;
+                Pulses = items.Pulses;
+                Wheat = items.Wheat;
+                Console.WriteLine("Which grain item you want to check : \n1.Rice\t\t2.Pulses\t\t3.Wheat");
+                int option = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Name\t->\tPrice_Per_Kg\t->\tWeight\t->\tTotal_Price");
+                switch (option)
                 {
-                    double Total_Price = x.price_per_kg * x.weight;
-                    Console.WriteLine(x.name + "     ->      " + x.price_per_kg + "      ->      " + x.weight + "        ->      " + Total_Price);
+                    case 1:
+                        foreach (var x in Rice)
+                        {
+                            double Total_Price = x.price_per_kg * x.weight;
+                            Console.WriteLine(x.name + "\t->\t" + x.price_per_kg + "\t->\t" + x.weight + "\t->\t" + Total_Price);
+                        }
+                        break;
+                    case 2:
+                        foreach (var x in Pulses)
+                        {
+                            double Total_Price = x.price_per_kg * x.weight;
+                            Console.WriteLine(x.name + "\t->\t" + x.price_per_kg + "\t->\t" + x.weight + "\t->\t" + Total_Price);
+                        }
+                        break;
+                    case 3:
+                        foreach (var x in Wheat)
+                        {
+                            double Total_Price = x.price_per_kg * x.weight;
+                            Console.WriteLine(x.name + "\t->\t" + x.price_per_kg + "\t->\t" + x.weight + "\t->\t" + Total_Price);
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
                 }
-
+               
             }
         }
     }

@@ -1,18 +1,56 @@
-[
+{
 
-  {
-    "name": "Rice",
-    "weight": "10",
-    "price_per_kg": "14"
-  },
-  {
-    "name": "Pulses",
-    "weight": "20",
-    "price_per_kg": "10"
-  },
-  {
-    "name": "Wheats",
-    "weight": "30",
-    "price_per_kg": "15"
-  }
-]
+  "Rice": [
+
+    {
+      "name": "Rice_Quality1",
+      "weight": "10",
+      "price_per_kg": "14"
+    },
+    {
+      "name": "Rice_Quality2",
+      "weight": "10",
+      "price_per_kg": "12"
+    },
+    {
+      "name": "Rice_Quality3",
+      "weight": "10",
+      "price_per_kg": "10"
+    }
+  ],
+
+  "Pulses": [
+    {
+      "name": "Pulses_Quality1",
+      "weight": "20",
+      "price_per_kg": "10"
+    },
+    {
+      "name": "Pulses_Quality2",
+      "weight": "20",
+      "price_per_kg": "9"
+    },
+    {
+      "name": "Pulses_Quality3",
+      "weight": "20",
+      "price_per_kg": "8"
+    }
+  ],
+  "Wheat": [
+    {
+      "name": "Wheats_Quality1",
+      "weight": "30",
+      "price_per_kg": "15"
+    },
+    {
+      "name": "Wheats_Quality2",
+      "weight": "30",
+      "price_per_kg": "13"
+    },
+    {
+      "name": "Wheats_Quality3",
+      "weight": "30",
+      "price_per_kg": "12"
+    }
+  ]
+}
