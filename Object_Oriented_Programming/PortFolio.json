@@ -1,0 +1,17 @@
+[
+  {
+    "StockName": "Hindustan",
+    "numberOfShares": "50",
+    "SharePrice": "100000"
+  },
+  {
+    "StockName": "Airtel",
+    "numberOfShares": "40",
+    "SharePrice": "130000"
+  },
+  {
+    "StockName": "ONGC",
+    "numberOfShares": "100",
+    "SharePrice": "1500000"
+  }
+]
